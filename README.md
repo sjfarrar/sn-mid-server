@@ -1,11 +1,11 @@
 # docker ServiceNow MID Server
 
-This is a Dockerfile to set up "ServiceNow MID Server" - (http://wiki.servicenow.com/index.php?title=MID_Server_Installation)
+This is a Dockerfile to set up a "ServiceNow MID Server" - (https://docs.servicenow.com/bundle/kingston-servicenow-platform/page/product/mid-server/reference/r-MIDServer.html#)
 
 ## Build from docker file
 
 ```
-git clone https://github.com/tools-proservia/sn-mid-server.git
+git clone https://github.com/sjfarrar/sn-mid-server.git
 cd sn-mid-server
 docker build -t sn-mid-server .
 ```
@@ -22,7 +22,7 @@ docker run -d --name demonightlyeureka \
   -e 'SN_USER=admin' \
   -e 'SN_PASSWD=admin' \
   -e 'SN_MID_NAME=my_mid' \
-  toolsproservia/sn-mid-server
+  sjfarrar/sn-mid-server
 ```
 
 ### generate config.xml file
@@ -33,7 +33,7 @@ docker run --rm \
   -e 'SN_USER=admin' \
   -e 'SN_PASSWD=admin' \
   -e 'SN_MID_NAME=my_personnal_mid' \
-  toolsproservia/sn-mid-server mid:setup > /my_directory/demonightlyeureka/config.xml
+  sjfarrar/sn-mid-server mid:setup > /my_directory/demonightlyeureka/config.xml
 ```
 
 ### start with persistent storage
@@ -42,7 +42,7 @@ docker run --rm \
 docker run -d --name demonightlyeureka \
   -v /my_directory/demonightlyeureka/logs:/opt/agent/logs \
   -v /my_directory/demonightlyeureka/config.xml:/opt/agent/config.xml \
-  toolsproservia/sn-mid-server
+  sjfarrar/sn-mid-server
 ```
 
 ## Help
