@@ -5,7 +5,7 @@ This is a Dockerfile to set up a "ServiceNow MID Server" - (https://docs.service
 ## Build from docker file
 
 ```
-git clone https://github.com/sjfarrar/sn-mid-server.git
+git clone https://github.com/sjfarrar/sn-mid-server
 cd sn-mid-server
 docker build -t sn-mid-server .
 ```
